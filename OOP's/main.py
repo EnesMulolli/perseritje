@@ -29,10 +29,22 @@ class Pets:
         self.species = species
         self.breed = breed
         self.color = color
-    def makeSound(self):void
 
-        if result == "dog":
+    def makeSound(self):
+        if self.species == "dog":
             print("Hum Hum")
-        elif result == "kitten":
+        elif self.species == "kitten":
             print("Meow")
+        else:
+            print("Unknown Pet!")
+
+    def __str__(self):
+        return f"{self.name}, is a {self.age} {self.color} {self.breed} {self.species}"
+
+Pet1 = Pets("Bob", "2 Years old", "dog", "Shephard", "Black")
+Pet2 = Pets("Lara", "6 months old", "kitten", "Lynx", "black and brown" )
+
+Pet1.makeSound()
+print(Pet2)
+Pet2.makeSound()
 
